@@ -3,5 +3,5 @@ background_color = #000000
 font_color = #FFFFFF
 font_family = Arial
 timer_font_size = 48
-session_font_size = 30
+session_font_size = 24
 settings_font_size = 16

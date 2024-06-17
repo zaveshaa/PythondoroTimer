@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QSizePolicy
 from PyQt5.QtCore import QTimer, Qt, QSize, QPropertyAnimation
 from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtMultimedia import QSound
 import configparser
 
 class MainTimerWindow(QWidget):
@@ -217,6 +218,10 @@ class MainTimerWindow(QWidget):
             self.remaining_time -= 1
         else:
             self.timer.stop()
+            if self.message_label.text() == self.main_message:
+                QSound.play("bell.wav")
+            else:
+                QSound.play("bell.wav")
             self.next_phase()
 
     def save_settings(self):
